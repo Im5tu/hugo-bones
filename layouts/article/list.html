@@ -1,3 +1,7 @@
-{{- partial "site/preContent" . -}}
-{{- partial "content/articles" . -}}
-{{- partial "site/postContent" . -}}
+{{ define "content" }}
+<section class="article-list">
+    {{ range .Data.Pages -}}
+        {{- .Render "summary" }}
+    {{- end }}
+</section>
+{{ end }}

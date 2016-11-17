@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head{{ if (isset .Site "languageCode") }} lang="{{ .Site.languageCode }}" {{ end }}>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+    <link rel="canonical" href="{{ .Permalink }}">
+    {{ with .Description }}<meta name="description" content="{{ . }}">{{ end }}
+    {{ if (isset .Params "prev") }}<link rel="prev" href="{{ .Params.prev }}">{{ end }}
+    {{ if (isset .Params "next") }}<link rel="next" href="{{ .Params.next }}">{{ end }}
+    {{ block "header" . -}} {{- end }} {{- partial "header/all" . -}}
+</head>
+<body>
+{{ block "content" . -}} {{- end }}
+{{- partial "header/scripts" . -}}
+</body>
+</html>

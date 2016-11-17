@@ -1,0 +1,16 @@
+<article class="article">
+    <header class="article-header">
+        <h2><a href="{{ .Permalink }}">{{- .Title -}}</a></h2>
+        <p>Published: <time class="article-header-time" pubdate="pubdate">{{ .Date }}</time><p>
+    </header>
+    <section class="article-summary">
+    {{- .Summary -}}
+    </section>
+    <footer class="article-footer">
+        <p>Tags:
+            <ul class="article-footer-tags">
+                {{ range .Params.tags -}}<li>{{ . }}</li>{{- end }}
+            </ul>
+        </p>
+    </footer>
+</article>

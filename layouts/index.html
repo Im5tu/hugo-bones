@@ -1,2 +1,8 @@
-{{- partial "header" . -}}
-{{- partial "footer" . -}}
+{{ define "content" }}
+<section class="article-list">
+    <h1>Latest Articles</h1>
+    {{ range first 10 .Data.Pages -}}
+        {{- .Render "summary" }}
+    {{- end }}
+</section>
+{{ end }}
