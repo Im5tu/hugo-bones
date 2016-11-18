@@ -4,5 +4,8 @@
     {{ range first 10 .Data.Pages -}}
         {{- .Render "summary" }}
     {{- end }}
+    <footer>
+        <p><a href="/article/">View All Posts</a></p>
+    </footer>
 </section>
 {{ end }}
