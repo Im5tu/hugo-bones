@@ -1,0 +1,16 @@
+{{ define "content" }}
+
+<article class="category">
+    <header class="category-header">
+        <h1>Pages tagged: {{ .Title -}}</p>
+    </header>
+    <section class="category-content">
+        {{ range .Data.Pages }}
+            {{ .Render "summary"}}
+        {{ end }}
+    </section>
+    <footer class="category-footer">
+    </footer>
+</article>
+
+{{ end }}
