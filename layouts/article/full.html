@@ -8,9 +8,9 @@
     </section>
     <footer class="article-footer">
         <hr />
-        <p>Tags:
+            <p>Tags:
             <ul class="article-footer-tags">
-                {{ range .Params.tags -}}<li>{{ . }}</li>{{- end }}
+                {{ range .Params.tags -}}<li><a class="article-tag" href="/tags/{{ . | urlize }}/">{{- . -}}</a></li>{{- end }}
             </ul>
         </p>
     </footer>
