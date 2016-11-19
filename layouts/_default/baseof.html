@@ -8,10 +8,11 @@
     {{ with .Description }}<meta name="description" content="{{ . }}">{{ end }}
     {{ if (isset .Params "prev") }}<link rel="prev" href="{{ .Params.prev }}">{{ end }}
     {{ if (isset .Params "next") }}<link rel="next" href="{{ .Params.next }}">{{ end }}
-    {{ block "header" . -}} {{- end }} {{- partial "header/all" . -}}
+    {{ block "header" . -}} {{- end }} 
+    {{- partial "header/all" . -}}
 </head>
 <body>
 {{ block "content" . -}} {{- end }}
-{{- partial "header/scripts" . -}}
+{{ partial "body/scripts" . }}
 </body>
 </html>
