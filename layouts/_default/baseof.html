@@ -12,7 +12,13 @@
     {{- partial "header/all" . -}}
 </head>
 <body>
-{{ block "content" . -}} {{- end }}
+<section class="pageContainer">
+    {{ partial "body/pageHeader" . }}
+    <section class="pageContainer-content">
+        {{ block "content" . -}} {{- end }}
+    </section>
+    {{ partial "body/pageFooter" . }}
+</section>
 {{ partial "body/scripts" . }}
 </body>
 </html>

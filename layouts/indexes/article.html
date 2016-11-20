@@ -1,5 +1,7 @@
 {{ define "content" }}
-    {{ range .Data.Pages }}
-        {{- .Render "summary" -}}
-    {{ end }}
+<section class="article-list">
+    {{ range .Data.Pages -}}
+        {{- .Render "summary" }}
+    {{- end }}
+</section>
 {{ end }}

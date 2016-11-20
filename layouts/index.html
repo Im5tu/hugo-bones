@@ -1,6 +1,6 @@
 {{ define "content" }}
+<h2>Latest Articles</h2>
 <section class="article-list">
-    <h1>Latest Articles</h1>
     {{ range first 10 .Data.Pages -}}
         {{- .Render "summary" }}
     {{- end }}

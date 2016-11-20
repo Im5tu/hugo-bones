@@ -7,10 +7,6 @@
     {{- .Summary -}}
     </section>
     <footer class="article-footer">
-        <p>Tags:
-            <ul class="article-footer-tags">
-                {{ range .Params.tags -}}<li><a class="article-tag" href="/tags/{{ . | urlize }}/">{{- . -}}</a></li>{{- end }}
-            </ul>
-        </p>
+        {{- partial "article/tags" .Params -}}
     </footer>
 </article>
