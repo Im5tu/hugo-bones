@@ -2,9 +2,10 @@
 <html>
 <head{{ if (isset .Site "languageCode") }} lang="{{ .Site.languageCode }}" {{ end }}>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
     <link rel="canonical" href="{{ .Permalink }}">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     {{ with .Description }}<meta name="description" content="{{ . }}">{{ end }}
     {{ if (isset .Params "prev") }}<link rel="prev" href="{{ .Params.prev }}">{{ end }}
     {{ if (isset .Params "next") }}<link rel="next" href="{{ .Params.next }}">{{ end }}
