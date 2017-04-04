@@ -15,7 +15,7 @@
 <body>
 <section class="pageContainer">
     {{ partial "body/pageHeader" . }}
-    <section class="pageContainer-content">
+    <section class="pageContainer-content pageWrap">
         {{ block "content" . -}} {{- end }}
     </section>
     {{ partial "body/pageFooter" . }}
