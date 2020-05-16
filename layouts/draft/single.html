@@ -1,0 +1,7 @@
+{{ define "title" -}}
+    {{ if .Title }}{{ printf "%s - %s" .Title .Site.Title }}{{ else }}{{ .Site.Title }}{{ end }}
+{{- end }}
+
+{{ define "content" -}}
+    {{- .Render "full" -}}
+{{- end }}

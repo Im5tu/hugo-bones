@@ -1,0 +1,8 @@
+{{ define "content" }}
+<section class="warning"><p>This section contains draft blog posts. Any material is subject to change at any time.</p></section> 
+<section class="article-list">
+    {{ range .Data.Pages -}}
+        {{- .Render "summary" }}
+    {{- end }}
+</section>
+{{ end }}
